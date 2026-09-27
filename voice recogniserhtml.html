@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Portfolio Website</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+header {
+    background: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background: #457b9d;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    padding: 12px 18px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #1d3557;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #1d3557;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #457b9d;
+    color: white;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+button {
+    background: #2a9d8f;
+    color: white;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    background: #1d3557;
+    color: white;
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Hyder Ali - Student Portfolio</h1>
+<p>B.Tech CSE | Learning Web Development</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#academic">Academic</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<!-- ABOUT -->
+<div class="card" id="about">
+<h2>About Me</h2>
+<p>I am a Computer Science student with a strong interest in web development and programming. I have learned the basics of HTML, CSS, and JavaScript and enjoy building simple and functional websites. I focus on understanding concepts clearly and applying them through small projects.</p>
+<button onclick="showMsg()">Know More</button>
+<p id="msg"></p>
+</div>
+
+<!-- SKILLS -->
+<div class="card" id="skills">
+<h2>Skills</h2>
+<ul>
+<li>HTML5 (Tags, Forms, Tables)</li>
+<li>CSS (Styling, Layout, Colors)</li>
+<li>JavaScript (Basics, Functions)</li>
+<li>C++ Programming</li>
+<li>Problem Solving</li>
+</ul>
+</div>
+
+<!-- PROJECTS -->
+<div class="card" id="projects">
+<h2>Projects</h2>
+<ol>
+<li>Personal Portfolio Website using HTML & CSS</li>
+<li>Student Record Table Interface</li>
+<li>Simple Form Validation using JavaScript</li>
+</ol>
+</div>
+
+<!-- ACADEMIC TABLE -->
+<div class="card" id="academic">
+<h2>Academic Record</h2>
+<table>
+<tr>
+<th>Year</th>
+<th>Course</th>
+<th>Institute</th>
+<th>Percentage</th>
+</tr>
+<tr>
+<td>2024</td>
+<td>B.Tech CSE</td>
+<td>Akal University</td>
+<td>78%</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>12th</td>
+<td>JKBOSE</td>
+<td>82%</td>
+</tr>
+<tr>
+<td>2018</td>
+<td>10th</td>
+<td>JKBOSE</td>
+<td>85%</td>
+</tr>
+</table>
+</div>
+
+<!-- CONTACT -->
+<div class="card" id="contact">
+<h2>Contact Me</h2>
+<form onsubmit="return validate()">
+<label>Name:</label>
+<input type="text" id="name">
+
+<label>Email:</label>
+<input type="email" id="email">
+
+<label>Message:</label>
+<textarea id="message"></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+<p id="formMsg"></p>
+</div>
+
+</div>
+
+<footer>
+<p>©️ 2026 Hyder Ali | Student Portfolio</p>
+</footer>
+
+<script>
+function showMsg() {
+    document.getElementById("msg").innerText = "I am currently improving my frontend skills and working on small projects.";
+}
+
+function validate() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name === "" || email === "") {
+        document.getElementById("formMsg").innerText = "Please fill all required fields.";
+        return false;
+    }
+
+    document.getElementById("formMsg").innerText = "Message sent successfully!";
+    return false;
+}
+</script>
+
+</body>
+</html>
